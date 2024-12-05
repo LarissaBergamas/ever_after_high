@@ -1,3 +1,4 @@
+
 function testar(){
 
     let contMadeline=0;
@@ -37,24 +38,30 @@ function testar(){
     localStorage.setItem('raven', contRaven)
 
 
-    let maior = 0
-    let pagina
-    if (contMadeline > maior) {
-        pagina = 'madeline'
-    }
-    if (contBriar > maior) {
-        pagina = 'briar'
-    }
-    if (contApple > maior) {
-        pagina = 'apple'
-    }
-    if (contRaven > maior) {
-        pagina = 'raven'
-    }
+    let maior = 0;
+     let pagina;
 
-    setTimeout(() => {
-        window.open(pagina+'.html')
-    }, 5000);
+if (contMadeline > maior) {
+    maior = contMadeline;
+    pagina = 'madeline';
+}
+if (contBriar > maior) {
+    maior = contBriar;
+    pagina = 'briar';
+}
+if (contApple > maior) {
+    maior = contApple;
+    pagina = 'apple';
+}
+if (contRaven > maior) {
+    maior = contRaven;
+    pagina = 'raven';
+}
+
+setTimeout(() => {
+    window.open(pagina + '.html');
+}, 5000);
+
 
 
 }
