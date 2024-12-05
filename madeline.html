@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h3>Seu resultado é...</h3>
+    <br>
+    <h1>Madeline Hatter</h1>
+
+    <h1 id="votos"></h1>
+
+    <img scr="" alt="Madeline Hatter"> 
+
+    <p id="descricao">Madeline Hatter é a filha do Chapeleiro Maluco e,
+                     como sua herança, ela é excêntrica, divertida e sempre em
+                     busca de aventura. Com seu jeito único de ver o mundo, ela
+                     gosta de fazer as coisas de maneira diferente e tem um espírito
+                     criativo inigualável. Madeline é muito leal aos seus amigos e adora
+                     fazer surpresas. Sua personalidade animada e suas ideias malucas são
+                     sempre uma fonte de diversão em Ever After High.</p>
+
+
+    <script>
+        let contMadeline = localStorage.getItem('madeline')
+        document.querySelector('#votos').innerHTML = 'Votos: ' + contMadeline
+    </script>
+
+</body>
+</html>

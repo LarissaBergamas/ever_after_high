@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h3>Seu resultado é...</h3>
+    <br>
+    <h1>Raven Queen</h1>
+
+    <h1 id="votos"></h1>
+
+    <img scr="" alt="Raven Queen"> 
+
+    <p id="descricao">Raven Queen é a filha da Rainha Má e representa a 
+        rebeldia e o desejo de mudar o próprio destino. Ela questiona as 
+        tradições e não quer seguir o mesmo caminho de sua mãe. Raven é 
+        inteligente, introspectiva e muitas vezes se vê em conflito com 
+        as expectativas que sua herança impõe sobre ela. Seu maior desejo 
+        é ser fiel a si mesma e criar sua própria história, longe da 
+        sombra de sua mãe malvada.</p>
+
+    <script>
+        let contRaven = localStorage.getItem('raven')
+        document.querySelector('#votos').innerHTML = 'Votos: ' + contRaven
+    </script>
+
+</body>
+</html>

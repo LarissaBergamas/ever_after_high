@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h3>Seu resultado é...</h3>
+    <br>
+    <h1>Briar Beauty</h1>
+
+    <h1 id="votos"></h1>
+
+    <img scr="" alt="Briar Beauty"> 
+
+    <p id="descricao">Briar Beauty é a filha da Bela Adormecida e tem uma 
+        personalidade encantadora e sonhadora. Ela é gentil, calorosa e 
+        valoriza a paz e a harmonia. Briar adora descansar e sonhar com 
+        novas aventuras, mas também sabe que deve encontrar um equilíbrio 
+        entre a vida tranquila e o compromisso com o seu legado. Apesar de 
+        ser uma boa amiga, Briar tem o poder de ser destemida e lutar quando 
+        é necessário, mesmo que seu instinto seja o de relaxar e aproveitar 
+        o momento.</p>
+
+    <script>
+        let contBriar = localStorage.getItem('briar')
+        document.querySelector('#votos').innerHTML = 'Votos: ' + contBriar
+    </script>
+
+</body>
+</html>

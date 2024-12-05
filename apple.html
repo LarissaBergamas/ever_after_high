@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h3>Seu resultado é...</h3>
+    <br>
+    <h1>Apple White</h1>
+
+    <h1 id="votos"></h1>
+
+    <img scr="" alt="Apple White"> 
+
+    <p id="descricao">Apple White é a filha da Branca de Neve e representa
+         a perfeição e a elegância. Ela acredita em seguir as tradições e 
+         espera que todos ao seu redor se comportem de acordo com o legado 
+         de suas famílias. Seu principal objetivo é ser uma boa líder e 
+         garantir que sua história tenha um final feliz. Apple é otimista, 
+         confiante e sempre busca o melhor para si e para os outros, mesmo 
+         que tenha que lidar com seus próprios dilemas de identidade.</p>
+
+    <script>
+        let contApple = localStorage.getItem('apple')
+        document.querySelector('#votos').innerHTML = 'Votos: ' + contApple
+    </script>
+
+</body>
+</html>
