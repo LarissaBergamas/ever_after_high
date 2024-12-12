@@ -157,3 +157,12 @@ function testar() {
         window.location.href = pagina + '.html'; 
     }, 5000);
 }
+
+const musica = document.getElementById("musica")
+const botao = document.getElementById("btn_msc").addEventListener("click",function(){
+    if(musica.paused){
+        musica.muted = false;
+        musica.play();
+    }
+    
+})
