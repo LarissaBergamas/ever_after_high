@@ -1,64 +1,89 @@
-body {
-    background-color: lightgoldenrodyellow;
+/* Reset básico */
+body, h1, h3, p {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h3 {
-    font-family: 'Playfair Display', serif;
-    margin-top: 3rem;
-    text-align: center;
-    font-size: 1.5rem;
-    color: black;
-    margin-bottom: 0;
-}
-
-h1 {
-    font-family: 'Cinzel Decorative', serif;
-    text-align: center;
-    font-size: 4rem;
-    color: #822448;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-}
-
-#votos {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 2rem;
-    color: black;
-    margin-top: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-
-.card {
+body {
+    font-family: 'Courier New', Courier, monospace; /* Fonte com um toque vintage e clássico */
+    background: linear-gradient(to bottom, #f7e6f5, #cdb9e4); /* Cores suaves, lembrando magia */
+    color: #4b2d73; /* Roxo profundo para texto, em harmonia com Ever After High */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f4f4f4; /* Fundo branco translúcido */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    gap: 20px; /* Espaço entre imagem e descrição */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #612c83;
+    text-shadow: 2px 2px 4px #d8b9e8; /* Efeito mágico no título */
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #7d4790;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px #f4c7f9;
+}
+
+.card {
+    background: #ffffff; /* Fundo branco elegante */
+    border: 2px solid #b993d6; /* Bordas delicadas e mágicas */
+    border-radius: 10px;
+    width: 300px; /* Tamanho compacto para o cartão */
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card img {
-    width: 300px; /* Largura fixa da imagem */
-    height: auto; /* Mantém proporção */
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-bottom: 2px solid #b993d6; /* Separação visual entre a imagem e a descrição */
+    border-radius: 8px 8px 0 0;
 }
 
-.card #descricao {
-    flex: 1;
-    /*font-family: 'Playfair Display', serif;*/
-    font-family: "Fleur De Leah", cursive;
-    font-size: 2rem;
-    line-height: 1.6;
-    color: #539172;
+#descricao {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #4b2d73;
+    margin-top: 10px;
 }
 
+#votos {
+    font-size: 1.2rem;
+    color: #7d4790;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row; /* Alinha imagem e descrição lado a lado */
+        width: 50rem; /* Aumenta a largura para desktop */
+        text-align: left; /* Ajusta alinhamento para texto */
+    }
+
+    .card img {
+        width: 40%;
+        height: auto;
+        border-radius: 10px 0 0 10px; /* Ajusta bordas para visual lado a lado */
+        border-bottom: none;
+        border-right: 2px solid #b993d6; /* Separação visual lateral */
+    }
+
+    #descricao {
+        margin-top: 0;
+        padding-left: 15px; /* Espaço entre imagem e texto */
+    }
+}

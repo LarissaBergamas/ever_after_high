@@ -3,28 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado</title>
+    <title>Resultado - Raven Queen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Fleur+De+Leah&family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="resultado.css">
 </head>
 <body>
     <h3>Seu resultado é...</h3>
     <br>
     <h1>Raven Queen</h1>
 
-    <h1 id="votos"></h1>
+    <h2 id="votos">Votos: </h2>
 
-    <img src="raven_queen.jpeg" alt="Raven Queen"> 
+    <h3 id="porcentagem">Porcentagem: </h3>
 
-    <p id="descricao">Raven Queen é a filha da Rainha Má e representa a 
-        rebeldia e o desejo de mudar o próprio destino. Ela questiona as 
-        tradições e não quer seguir o mesmo caminho de sua mãe. Raven é 
-        inteligente, introspectiva e muitas vezes se vê em conflito com 
-        as expectativas que sua herança impõe sobre ela. Seu maior desejo 
-        é ser fiel a si mesma e criar sua própria história, longe da 
-        sombra de sua mãe malvada.</p>
+    <div class="card">
+        <img src="raven_queen.jpeg" alt="Raven Queen">
+
+        <p id="descricao">
+            Raven Queen é a filha da Rainha Má e representa a rebeldia e o desejo
+            de mudar o próprio destino. Ela questiona as tradições e não quer seguir
+            o mesmo caminho de sua mãe. Raven é inteligente, introspectiva e muitas
+            vezes se vê em conflito com as expectativas que sua herança impõe sobre
+            ela. Seu maior desejo é ser fiel a si mesma e criar sua própria história,
+            longe da sombra de sua mãe malvada.
+        </p>
+    </div>
 
     <script>
-        let contRaven = localStorage.getItem('raven')
-        document.querySelector('#votos').innerHTML = 'Votos: ' + contRaven
+       
+        let contRaven = localStorage.getItem('raven');
+        let contBriar = localStorage.getItem('briar');
+        let contApple = localStorage.getItem('apple');
+        let contMadeline = localStorage.getItem('madeline');
+
+    
+        let totalRespostas = parseInt(contMadeline) + parseInt(contBriar) + parseInt(contApple) + parseInt(contRaven);
+
+        let porcentagemRaven = (parseInt(contRaven) / totalRespostas) * 100;
+
+       
+        document.querySelector('#votos').innerHTML = 'Votos: ' + contRaven;
+        document.querySelector('#porcentagem').innerHTML = 'Porcentagem: ' + porcentagemRaven.toFixed(2) + '%';
     </script>
 
 </body>
