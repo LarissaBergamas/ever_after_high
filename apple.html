@@ -9,19 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Fleur+De+Leah&family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Uncial+Antiqua&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="resultado.css">
+    <link rel="stylesheet" href="apple.css">
 </head>
 <body>
-    <h3>Seu resultado é...</h3>
-    <br>
+    <h3>VOCÊ É...</h3>
+
+    <h3 id="porcentagem"></h3>
+
     <h1>Apple White</h1>
 
     <h2 id="votos">Votos: </h2>
 
-    <h3 id="porcentagem">Porcentagem: </h3>
-
-    <div class="card">
-        <img src="apple.html" alt="Apple White">
+    <div class="card" class="apple">
+        <img src="apple.jpg" alt="Apple White">
 
         <p id="descricao">
             Apple White é a filha da Branca de Neve e representa a perfeição e
@@ -35,21 +35,19 @@
     </div>
 
     <script>
-      
-        let contApple = localStorage.getItem('apple');
-        let contMadeline = localStorage.getItem('madeline');
         let contBriar = localStorage.getItem('briar');
+        let contMadeline = localStorage.getItem('madeline');
+        let contApple = localStorage.getItem('apple');
         let contRaven = localStorage.getItem('raven');
 
-    
+        
         let totalRespostas = parseInt(contMadeline) + parseInt(contBriar) + parseInt(contApple) + parseInt(contRaven);
 
         
-        let porcentagemApple = (parseInt(contApple) / totalRespostas) * 100;
+        let porcentagemBriar = (parseInt(contBriar) / totalRespostas) * 100;
 
-        
-        document.querySelector('#votos').innerHTML = 'Votos: ' + contApple;
-        document.querySelector('#porcentagem').innerHTML = 'Porcentagem: ' + porcentagemApple.toFixed(2) + '%';
+        document.querySelector('#porcentagem').innerHTML = '' + porcentagemMadeline.toFixed(2) + '%';
+        document.querySelector('#votos').innerHTML = 'Votos: ' + contMadeline;
     </script>
 
 </body>
