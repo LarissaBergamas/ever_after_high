@@ -5,9 +5,9 @@ body, h1, h3, p {
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace; /* Fonte com um toque vintage e clássico */
-    background: linear-gradient(to bottom, #ffd6c7, #9c4736); /* Cores suaves, lembrando magia */
-    color: #cf1f45; /* Roxo profundo para texto, em harmonia com Ever After High */
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom, #ffd6c7, #9c4736); 
+    color: #cf1f45;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ h1 {
     text-align: center;
     margin-top: 1rem;
     color: #cf1f45;
-    text-shadow: 3px 3px 4px #d8b9e8; /* Efeito mágico no título */
+    text-shadow: 3px 3px 4px #fc839d; 
 }
 
 h3 {
@@ -30,7 +30,7 @@ h3 {
     text-align: center;
     color: #cf1f45;
     margin-top: 1rem;
-    text-shadow: 1px 1px 3px #f4c7f9;
+    text-shadow: 1px 1px 3px #fc839d;
 }
 
 #porcentagem {
@@ -38,12 +38,12 @@ h3 {
 }
 
 .card {
-    background: #ffffff; /* Fundo branco elegante */
-    border: 0.2rem solid #cf1f45; /* Bordas delicadas e mágicas */
+    background: #ffffff; 
+    border: 0.2rem solid #cf1f45; 
     border-radius: 10px;
-    width: 300px; /* Tamanho compacto para o cartão */
+    width: 300px; 
     padding: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
     text-align: center;
     margin-top: 0.8rem;
     overflow: hidden;
@@ -54,7 +54,7 @@ h3 {
 
 .card img {
     width: 100%;
-    border-bottom: 0.2rem solid #539172; /* Separação visual entre a imagem e a descrição */
+    border-bottom: 0.2rem solid #9c4736; 
     border-radius: 8px 8px 0 0;
 }
 
@@ -76,21 +76,21 @@ h3 {
 
 @media (min-width: 768px) {
     .card {
-        flex-direction: row; /* Alinha imagem e descrição lado a lado */
-        width: 50rem; /* Aumenta a largura para desktop */
-        text-align: left; /* Ajusta alinhamento para texto */
+        flex-direction: row; 
+        width: 50rem; 
+        text-align: left;
     }
 
     .card img {
         width: 40%;
         height: auto;
-        border-radius: 10px 0 0 10px; /* Ajusta bordas para visual lado a lado */
+        border-radius: 10px 0 0 10px;
         border-bottom: none;
-        border-right: 0.2rem solid #9c4736; /* Separação visual lateral */
+        border-right: 0.2rem solid #9c4736; 
     }
 
     #descricao {
         margin-top: 0;
-        padding-left: 15px; /* Espaço entre imagem e texto */
+        padding-left: 15px; 
     }
 }
