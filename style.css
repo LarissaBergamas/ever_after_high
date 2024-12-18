@@ -5,24 +5,14 @@ body {
     margin: 0;
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    min-height: 100vh; 
     padding-top: 2rem;
+    background-image: url('imagem_fundo.png'); 
+    background-size: cover ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
-
-/*
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #007BFF;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-*/
 
 .container {
     display: flex;
@@ -36,40 +26,43 @@ header {
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
-    margin-top: 80px; /* Espaço para o header */
-    min-height: 300px; /* Espaço fixo para a pergunta */
+    margin-top: 80px; 
+    min-height: 300px;
 }
 
 .pergunta {
     margin-bottom: 20px;
     text-align: center;
+    background: linear-gradient(145deg, #d7b1d5, #e0a4c7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ab6da1;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #9b5f96;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    margin: 20px 0;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: purple;
-}
-
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    background-color: #7e4881;
 }
 
 #resultado {
-    margin-top: 2rem;
+    font-size: 1.2rem;
     text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+    color: #9b5f96;
+    margin-top: 30px;
 }
 
 #finalizar {
@@ -78,4 +71,25 @@ button:disabled {
     background-color: palevioletred;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        background-position: top; 
+    }
+
+    .container {
+        margin-top: 120px; /
+    }
+
+    .pergunta {
+        width: 100%; 
+        padding: 25px; 
+    }
+
+    button {
+        width: 100%; /
+    }
 }

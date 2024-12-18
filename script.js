@@ -158,11 +158,17 @@ function testar() {
     }, 5000);
 }
 
-const musica = document.getElementById("musica")
-const botao = document.getElementById("btn_msc").addEventListener("click",function(){
-    if(musica.paused){
-        musica.muted = false;
-        musica.play();
-    }
+const musica = document.getElementById("musica");
+    const botaoSom = document.getElementById("btn_msc");
+
+    botaoSom.addEventListener("click", function () {
+        if (musica.paused) {
+            musica.muted = false;
+            musica.play();
+            botaoSom.textContent = "Pausar Som";
+        } else {
+            musica.pause();
+            botaoSom.textContent = "Som";
+        }
     
 })
